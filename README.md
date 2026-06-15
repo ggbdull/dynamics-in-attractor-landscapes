@@ -2,16 +2,15 @@
 
 Code accompanying the preprint:
 
-"Regional Exploration Improves Optimization in Fragmented Search Landscapes"
+"Localized Reward-Conditioned Information Usage Reduces Exploration Diversity and Limits Long-Term Optimization in Fragmented Nonlinear Environments"
 
 ## Overview
 
 This repository contains:
 
-- ES search strategy
-- Top-1-vs-K regional exploration strategy
-- PCA-based trajectory analysis
-- Visualization scripts
+- greedy vs region score statistical difference
+- PCA-based region score heatmap
+- score and metrics for measuring exploration curve of two startegy
 
 ## Repository Structure
 
