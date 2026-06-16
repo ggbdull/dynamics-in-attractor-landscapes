@@ -1,4 +1,4 @@
-# Regional Exploration
+# Dynamics in Attractor Landscapes
 
 Code accompanying the preprint:
 
@@ -6,33 +6,67 @@ Code accompanying the preprint:
 
 ## Overview
 
-This repository contains:
+This repository contains the code,data and figures used in the study of comparation a local greedy search strategy with a distributed regional exploration strategies in fragmented optimization landscapes.
 
-- greedy vs region score statistical difference
-- PCA-based region score heatmap
-- score and metrics for measuring exploration curve of two startegy
+## Main Findings
+
+* Different search strategies produce distinct exploration structures in fragmented search landscapes.
+
+* Greedy search rapidly concentrates sampling around a small number of regions, whereas region strategy maintains distributed exploration across multiple candidate regions.
+
+* PCA trajectory analysis reveals systematic differences in the spatial organization of search trajectories.
+
+* These structural differences are associated with differences in long-term optimization performance, suggesting that maintaining distributed regional exploration can improve information acquisition in fragmented environments.
 
 ## Repository Structure
 
-es/            Evolution Strategy baseline
+greedy vs region statistic/
 
-top1vsk/       Regional exploration algorithm
+* Generate new greedy and region statistical difference in optimization.
 
-pca/           PCA trajectory analysis
+greedy vs region trajectory/
 
-figures/       Generated figures
+* Analyze previously generated data.
+* Compute landscape metrics.
+* Generate PCA and visualization figures.
 
-## Usage
+results/
 
-Run ES:
+* Experimental outputs used for analysis and visualization.
 
-python es/run.py
+paper/
 
-Run Top1-vs-K:
+* Preprint manuscript.
 
-python top1vsk/run.py
+## Requirements
 
-Generate PCA plots:
+Python 3.11+
 
-python pca/pca_analysis.py
+Required packages:
 
+* numpy
+* scipy
+* matplotlib
+* scikit-learn
+* sys
+* os
+## Reproducing Figures
+
+To reproduce the visualizations from the stored experimental data:
+open greedy vs region trajectory folder
+py src\analyze_landscape2.py
+
+## Running New Experiments
+
+To generate new optimization trajectories:
+open greedy vs region trajectory folder
+py src\main.py
+The generated outputs can then be analyzed using the scripts in the greedy vs region trajectory directory.
+
+To generate new statistical difference performance:
+open greedy vs region statistic folder
+py experiments\run.py
+
+## Notes
+
+Scripts inside the greedy vs region trajectory directory should be executed from the greedy vs region trajectory folder rather than the repository root because relative paths are used for loading data.
