@@ -1,6 +1,6 @@
 # Dynamics in Attractor Landscapes
 
-Code accompanying the preprint:
+Code accompanying the manuscipt:
 
 "Localized Reward-Conditioned Information Usage Reduces Exploration Diversity and Limits Long-Term Optimization in Fragmented Nonlinear Environments"
 
